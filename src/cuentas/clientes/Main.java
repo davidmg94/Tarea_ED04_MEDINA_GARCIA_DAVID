@@ -34,7 +34,8 @@ public class Main {
         }
         try {
             System.out.println("Ingreso en cuenta");
-            cuenta1.ingresar(695);
+            double num = pedirCantidad("Introduce cantidad a ingresar:");
+            cuenta1.ingresar(num);
             System.out.println("El saldo actual es:"+ cuenta1.estado() );
         } catch (Exception e) {
             System.out.print("Fallo al ingresar");
