@@ -1,5 +1,7 @@
 package cuentas.clientes;
 
+import java.util.Scanner;    
+
 public class Main {
 
     public static void main(String[] args) {
@@ -12,7 +14,15 @@ public class Main {
 
         operativa_cuenta(cuenta1, 0);
     }
-
+    
+    public static double pedirCantidad(String mensaje){
+        Scanner teclado = new Scanner(System.in);
+        double num;
+        System.out.println(mensaje);
+        num = teclado.nextDouble();
+        return num;
+    }       
+    
     private static void operativa_cuenta(Cuenta cuenta1, float cantidad) {
         try {
             cuenta1.retirar(2300);
