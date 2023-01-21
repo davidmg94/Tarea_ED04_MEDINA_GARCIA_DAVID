@@ -25,7 +25,9 @@ public class Main {
     
     private static void operativa_cuenta(Cuenta cuenta1, float cantidad) {
         try {
-            cuenta1.retirar(2300);
+            System.out.println("Retirada de cuenta");
+            double num = pedirCantidad("Introduce cantidad a retirar:");
+            cuenta1.retirar(num);
             System.out.println("El saldo actual es:"+ cuenta1.estado() );
         } catch (Exception e) {
             System.out.print("Fallo al retirar");
